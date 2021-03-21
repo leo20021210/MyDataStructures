@@ -1,20 +1,24 @@
 
 class Graph {
+	// egdes and number of nodes, vers and ele are only for my coding convenience.
 	int[][] edges;
 	int num;
 	boolean[] vers;
 	Stack ele=new Stack();
 
+	// If you do not specify, the defualt node number is 5.
 	public Graph() {
 		this(5);
 	}
 
+	// You tell me the number of nodes by constructor.
 	public Graph(int num) {
 		this.num = num;
 		this.edges = new int[num][num];
 		this.vers =new boolean[num];
 	}
 
+	//connect two nodes
 	public void connect(int a, int b) {
 		if(a>=num&&b>=num) {
 			System.out.println("We do not have edges");
@@ -249,3 +253,4 @@ class Test {
 		System.out.println(g.generalconnected(3, 6));
 		System.out.println(g.articulation());
 	}
+}
