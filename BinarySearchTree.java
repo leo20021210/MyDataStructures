@@ -127,7 +127,7 @@ class BST {
 			}
 			
 			root.data=correct.data;
-			root.right=delete(root.right,data);
+			root.right=delete(root.right,correct.data);
 		}
 		
 		return root;
