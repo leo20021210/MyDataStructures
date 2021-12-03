@@ -99,8 +99,22 @@ class BST {
 		return temp;
 	}
 	
-	public BSTNode delete(double data) {
-		return delete(root, data);
+	public boolean delete(double data) {
+		if(root == null) {
+    			return false;
+    		}
+    		if(root.left == null && root.right == null) {
+    			if(key == root.data) {
+    				root = null;
+    				return true;
+    			}else {
+    				return false;
+    			}
+    		}
+		if(delete(root, data) != null)
+            		return true;
+        	else
+            		return false;
 	}
 
 	private BSTNode delete(BSTNode root,double data) {
